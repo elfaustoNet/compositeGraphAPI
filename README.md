@@ -32,7 +32,7 @@ Composite graphs allows you to submit 500 nodes (subrequests) during synchronous
 
 Note: A graph is a collection of connected nodes. 
 
-![Node](/images/nodeDiagram.png)
+<img src="images/nodeDiagram.png" width="50%">
 
 
 Nodes are considered different if they use resources from differetn API versions and/or differetn types of objects.
@@ -42,7 +42,7 @@ For example:
 * v48.0/sobjects/*account* and v48.0/sobjects/*contact* are considered different
 
 ## Example
-![Example Data Model](/images/ExampleDataModel.png | width=200)
+<img src="images/ExampleDataModel.png" width="50%">
 
 Let’s pretend we have a property management app that apartment rental companies use to management locations. 
 We can see from the data model we have a property object, a rental space (in this case it’s apartment unit details but could also be commercial space like a store front), we leverage the contact objects as renters, and we use a junction object to  associate the current renter to the rental space. 
