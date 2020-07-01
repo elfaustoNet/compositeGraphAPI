@@ -1,0 +1,269 @@
+{
+    "graphs" : [
+    {
+        "graphId" : "graphNumber1",
+        "compositeRequest" : [
+            {
+                "url" : "/services/data/v48.0/sobjects/Property__c/",
+                "body" : {
+                    "name" : "Lenox Place",
+                    "Street__c" : "213 Lenox Blvd",
+                    "City__c" : "Atlanta",
+                    "State__c" : "GA",
+                    "Postal_Code__c" : "30326"
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_property_1"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space__c/",
+                "body" : {
+                    "Floor__c" : "1",
+                    "Unit__c" : "100",
+                    "Property__c" : "@{reference_id_property_1.id}",
+                    "Bedrooms__c" : 2.0,
+                    "Baths__c" : 1.0,
+                    "Sqft__c" : 950.0,
+                    "Occupied__c" : true 
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspace_1"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Contact/",
+                "body" : {
+                    "Firstname" : "Bill",
+                    "Lastname" : "Smith",
+                    "Email" : "bill@yopmail.com"
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_contact_1"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space_Renter__c/",
+                "body" : {
+                
+                    "Rental_Space__c" : "@{reference_id_rentalspace_1.id}",
+                    "Renter__c" : "@{reference_id_contact_1.id}",
+                    "Start_Date__c" : "2020-01-02"
+
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspacerenter_1"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space__c/",
+                "body" : {
+                    "Floor__c" : "1",
+                    "Unit__c" : "102",
+                    "Property__c" : "@{reference_id_property_1.id}",
+                    "Bedrooms__c" : 1.0,
+                    "Baths__c" : 1.5,
+                    "Sqft__c" : 900.0,
+                    "Occupied__c" : false 
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspace_2"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space__c/",
+                "body" : {
+                    "Floor__c" : "1",
+                    "Unit__c" : "104",
+                    "Property__c" : "@{reference_id_property_1.id}",
+                    "Bedrooms__c" : 1.0,
+                    "Baths__c" : 1.0,
+                    "Sqft__c" : 650.0,
+                    "Occupied__c" : true 
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspace_3"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Contact/",
+                "body" : {
+                    "Firstname" : "Sally",
+                    "Lastname" : "Samuals",
+                    "Email" : "sally@yopmail.com"
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_contact_2"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space_Renter__c/",
+                "body" : {
+                
+                    "Rental_Space__c" : "@{reference_id_rentalspace_3.id}",
+                    "Renter__c" : "@{reference_id_contact_2.id}",
+                    "Start_Date__c" : "2020-01-02"
+
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspacerenter_2"
+            },
+
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space__c/",
+                "body" : {
+                    "Floor__c" : "2",
+                    "Unit__c" : "200",
+                    "Property__c" : "@{reference_id_property_1.id}",
+                    "Bedrooms__c" : 2.0,
+                    "Baths__c" : 1.0,
+                    "Sqft__c" : 950.0,
+                    "Occupied__c" : false 
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspace_4"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space__c/",
+                "body" : {
+                    "Floor__c" : "2",
+                    "Unit__c" : "202",
+                    "Property__c" : "@{reference_id_property_1.id}",
+                    "Bedrooms__c" : 1.0,
+                    "Baths__c" : 1.5,
+                    "Sqft__c" : 900.0,
+                    "Occupied__c" : false 
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspace_5"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space__c/",
+                "body" : {
+                    "Floor__c" : "2",
+                    "Unit__c" : "204",
+                    "Property__c" : "@{reference_id_property_1.id}",
+                    "Bedrooms__c" : 1.0,
+                    "Baths__c" : 1.0,
+                    "Sqft__c" : 650.0,
+                    "Occupied__c" : false 
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspace_6"
+            }
+        ]},
+        {
+            "graphId" : "graphnumber2",
+        "compositeRequest" : [
+            {
+                "url" : "/services/data/v48.0/sobjects/Property__c/",
+                "body" : {
+                    "name" : "Winter Pines",
+                    "Street__c" : "434 Pinetree Place",
+                    "City__c" : "Atlanta",
+                    "State__c" : "GA",
+                    "Postal_Code__c" : "30329"
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_property_2"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space__c/",
+                "body" : {
+                    "Floor__c" : "1",
+                    "Unit__c" : "100",
+                    "Property__c" : "@{reference_id_property_2.id}",
+                    "Bedrooms__c" : 1.0,
+                    "Baths__c" : 1.5,
+                    "Sqft__c" : 850.0,
+                    "Occupied__c" : true 
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspace_20"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space__c/",
+                "body" : {
+                    "Floor__c" : "1",
+                    "Unit__c" : "101",
+                    "Property__c" : "@{reference_id_property_2.id}",
+                    "Bedrooms__c" : 1.0,
+                    "Baths__c" : 1.0,
+                    "Sqft__c" : 800.0,
+                    "Occupied__c" : false 
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspace_21"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space__c/",
+                "body" : {
+                    "Floor__c" : "1",
+                    "Unit__c" : "102",
+                    "Property__c" : "@{reference_id_property_2.id}",
+                    "Bedrooms__c" : 1.0,
+                    "Baths__c" : 1.5,
+                    "Sqft__c" : 850.0,
+                    "Occupied__c" : false 
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspace_22"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space__c/",
+                "body" : {
+                    "Floor__c" : "1",
+                    "Unit__c" : "103",
+                    "Property__c" : "@{reference_id_property_2.id}",
+                    "Bedrooms__c" : 1.0,
+                    "Baths__c" : 1.5,
+                    "Sqft__c" : 850.0,
+                    "Occupied__c" : false 
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspace_23"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space__c/",
+                "body" : {
+                    "Floor__c" : "2",
+                    "Unit__c" : "201",
+                    "Property__c" : "@{reference_id_property_2.id}",
+                    "Bedrooms__c" : 1.0,
+                    "Baths__c" : 1.0,
+                    "Sqft__c" : 800.0,
+                    "Occupied__c" : false 
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspace_24"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space__c/",
+                "body" : {
+                    "Floor__c" : "2",
+                    "Unit__c" : "202",
+                    "Property__c" : "@{reference_id_property_2.id}",
+                    "Bedrooms__c" : 1.0,
+                    "Baths__c" : 1.5,
+                    "Sqft__c" : 850.0,
+                    "Occupied__c" : false 
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspace_25"
+            },
+            {
+                "url" : "/services/data/v48.0/sobjects/Rental_Space__c/",
+                "body" : {
+                    "Floor__c" : "2",
+                    "Unit__c" : "203",
+                    "Property__c" : "@{reference_id_property_2.id}",
+                    "Bedrooms__c" : 1.0,
+                    "Baths__c" : 1.5,
+                    "Sqft__c" : 850.0,
+                    "Occupied__c" : false 
+                },
+                "method" : "POST",
+                "referenceId" : "reference_id_rentalspace_26"
+            }
+        ]
+    }
+]
+    
+}
+
+
+
+    
