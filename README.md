@@ -14,7 +14,7 @@ The composite API allows you to execute a series of rest api requests in a singl
 This allows you to orchestrate API calls into a single transaction to save on round trips. What's even cooler is that the entire request counts as a single call towards your API limits.  
 
 
-<img src="https://github.com/elfaustoNet/compositeGraphAPI/images/compositeApiRequest.png" width="50%">
+<img src="images/compositeApiRequest.png" width="50%">
 
 
 For example, if you want to create a new account and a new contact,  you can create the account and contact in the same api request and associate the contact to the account via a reference id. 
